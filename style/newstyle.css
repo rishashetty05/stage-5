@@ -1,0 +1,304 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+@charset "UTF-8";
+body
+  {
+  background-image: url(/images/image4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+header
+	{
+		width:100%;
+		position: fixed;
+    top: 0;
+		left: 0;
+		height: 110px; 
+		background-color: #66665e;
+		color: white;
+		font-size: 1.6em;
+		font-family: 'Open Sans', sans-serif;
+		padding:5px;
+    border: 5px solid #656659;
+	}
+.myimage
+  {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    border-radius: 50%; 
+    z-index: -1;
+  }
+#sidebar1
+  { 
+    list-style-type: none;
+    position: fixed;
+    top: 150px;/*pixels more precise than % - decided this number on coparing with header height*/
+    left: 10px;
+    bottom: 0%;
+    display: block;
+    margin: 0;
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+  } 
+
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a 
+  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+#cssmenu 
+  {
+    width: 250px;
+    border-bottom: 4px solid #656659;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+#cssmenu a 
+  {
+    line-height: 1.4;
+  }
+#cssmenu > ul > li:first-child 
+  {
+    background: #66665e;
+    background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+    background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+    background: linear-gradient(#66665e 0%, #45463d 100%);
+    border: 1px solid #45463d;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+  }
+#cssmenu > ul > li:first-child > a 
+  {
+    padding: 15px 10px;
+    background: url(/images/pattern.png) top left repeat;
+    border: none;
+    border-top: 1px solid #818176;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    text-shadow: 0 -1px 1px #000000;
+  }
+#cssmenu > ul > li:first-child > a > span 
+  {
+    padding: 0;
+  }
+#cssmenu > ul > li:first-child:hover 
+  {
+    background: #66665e;
+    background: -moz-linear-gradient(#66665e 0%, #45463d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66665e), color-stop(100%, #45463d));
+    background: -webkit-linear-gradient(#66665e 0%, #45463d 100%);
+    background: linear-gradient(#66665e 0%, #45463d 100%);
+  }
+#cssmenu > ul > li 
+  {
+    background: #e94f31;
+    background: -moz-linear-gradient(#e94f31 0%, #d13516 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e94f31), color-stop(100%, #d13516));
+    background: -webkit-linear-gradient(#e94f31 0%, #d13516 100%);
+    background: linear-gradient(#e94f31 0%, #d13516 100%);
+  }
+#cssmenu > ul > li:hover 
+  {
+    background: #e84323;
+    background: -moz-linear-gradient(#e84323 0%, #c33115 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e84323), color-stop(100%, #c33115));
+    background: -webkit-linear-gradient(#e84323 0%, #c33115 100%);
+    background: linear-gradient(#e84323 0%, #c33115 100%);
+  }
+#cssmenu > ul > li > a 
+  {
+    font-size: 14px;
+    display: block;
+    background: url(/images/pattern.png) top left repeat;
+    color: #ffffff;
+    border: 1px solid #ba2f14;
+    border-top: none;
+    text-shadow: 0 -1px 1px #751d0c;
+  }
+#cssmenu > ul > li > a > span 
+  {
+    display: block;
+    padding: 12px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+#cssmenu > ul > li > a:hover 
+  {
+    text-decoration: none;
+  }
+#cssmenu > ul > li.active 
+  {
+    border-bottom: none;
+  }
+#cssmenu > ul > li.has-sub > a span 
+  {
+    background: url(/images/icon_plus.png) 96% center no-repeat;
+  }
+#cssmenu > ul > li.has-sub.active > a span 
+  {
+    background: url(/images/icon_minus.png) 96% center no-repeat;
+  }
+/* Sub menu */
+#cssmenu ul ul 
+  {
+    display: none;
+    background: #fff;
+    border-right: 1px solid #a2a194;
+    border-left: 1px solid #a2a194;
+  }
+#cssmenu ul ul li 
+  {
+    padding: 0;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: none;
+    background: #f7f7f7;
+    background: -moz-linear-gradient(#f7f7f7 0%, #ececec 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #ececec));
+    background: -webkit-linear-gradient(#f7f7f7 0%, #ececec 100%);
+    background: linear-gradient(#f7f7f7 0%, #ececec 100%);
+  }
+#cssmenu ul ul li:last-child 
+  {
+    border-bottom: none;
+  }
+#cssmenu ul ul a 
+  {
+    padding: 10px 10px 10px 25px;
+    display: block;
+    color: #676767;
+    font-size: 12px;
+    font-weight: normal;
+  }
+#cssmenu ul ul a:before 
+  {
+    content: "»";
+    position: absolute;
+    left: 10px;
+    color: #e94f31;
+  }
+#cssmenu ul ul a:hover 
+  {
+    color: #e94f31;
+  }
+
+#contentblock
+  {
+    height: 100%;
+    padding:5px;
+    margin-top: 150px;
+    margin-left: 270px;
+    margin-right: 5px;
+    font-family: 'Open Sans', sans-serif; 
+    color:white; 
+    border-radius: 3px;
+    background: url(/images/pattern.png) top left repeat;
+  }
+
+.form-style-2
+  {
+    max-width: 450px;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 40px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #e94f31;
+  }
+.form-style-2 ul
+  {
+    padding:0;
+    margin:0;
+    list-style:none;
+  }
+
+.form-style-2 ul li
+  {
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+  }
+
+.form-style-2 ul li  .field-style
+  {
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    padding: 8px;
+    outline: none;
+    border: 1px solid #B0CFE0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+  }
+.form-style-9 ul li  .field-style:focus
+  {
+    box-shadow: 0 0 5px #B0CFE0;
+    border:1px solid #B0CFE0;
+  }
+.form-style-9 ul li .field-split
+  {
+    width: 49%;
+  }
+.form-style-9 ul li .field-full
+  {
+    width: 100%;
+  }
+.form-style-9 ul li input.align-left
+  {
+    float:left;
+  }
+.form-style-9 ul li input.align-right
+  {
+    float:right;
+  }
+.form-style-9 ul li textarea
+  {
+    width: 100%;
+    height: 100px;
+  }
+.form-style-9 ul li input[type="button"], 
+.form-style-9 ul li input[type="submit"] 
+  {
+    -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+    box-shadow: inset 0px 1px 0px 0px #3985B1;
+    background-color: #216288;
+    border: 1px solid #17445E;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font: 12px Arial, Helvetica, sans-serif;
+  }
+.form-style-9 ul li input[type="button"]:hover, 
+.form-style-9 ul li input[type="submit"]:hover 
+  {
+    background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+  }

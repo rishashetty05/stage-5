@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h3>Please login to comment on my notes</h3> 
+    <a href="{{ url|safe }}">{{ url_linktext }}</a>
+    </div>
+    <form class="form-style-2" action = '/sign?comments_holder={{comments_holder}}' method = "post">
+        <ul>
+        <li>
+            <legend>Title<abbr title="This field is mandatory"></abbr></legend>
+            <input type="radio" required name="title" id="r2" value="Mr">Mr.
+            <input type="radio" required name="title" id="r2" value="Ms">Ms.
+        </li>
+        <li>
+            <p><label> NAME : </label> 
+            <input class="field-style field-split align-left" type="text" name="name" required placeholder="Name" value = "{{name}}"> 
+            <div style = "color:red">{{nameerror}}</div></p>
+        <!--nameerror variable will be filled by template_value dictionary to appear as a red texted color on html input page-->
+            <p><label> EMAIL : </label><input type="email" name="email" class="field-style field-split align-left" required placeholder="Email" value = "{{email}}">
+            <div style = "color:red">{{emailerror}}</div></p>
+        </li>
+        <li>
+            <p>
+            <label>PHONE :</label> <input type="text" name="phone" class="field-style field-split align-left" placeholder="Enter a Valid Phone" /></p>
+            <p> <label> LOCATION: </label> 
+            <input type="text" class="field-style field-split align-left" name= "location" required placeholder="Enter a valid country" value = "{{location}}">
+            <div style = "color:red">{{locationerror}}</div></p>
+            <p> <label> TOPIC : </label> 
+            <input type="text" name="topic" class="field-style field-full align-left" placeholder="topic">
+            </p>
+        </li>
+        <li>
+            <p><textarea name="content" class="field-style" cols="50" rows="5" maxlength = "200" placeholder="Message"></textarea><p>
+                <div style = "color:red">{{error_msg}}</div></p>
+        </li>
+        <li>
+            <input type="submit" value="Submit">
+        </li>
+        </ul>
+    </form>
+
+    <form>
+        CommentHolder Name:
+      <input value="{{comments_holder}}" name="comments_holder">
+      <input type="submit" value="switch">
+    </form>
+<hr>
+    <h3 style= "color: #e94f31;" >COMMENTS:</h3>
+    <div>  
+        {% for comment in comments %}
+            {% if comment.author %}
+                <b>{{ comment.author.email }}</b> wrote:
+            {% endif %}
+            <blockquote>{{ comment.content|escape }}</blockquote>
+                <div style = "color:red">{{error_msg}}</div>
+        {% endfor %}
+        
+    </div>
+{%endblock%}
+

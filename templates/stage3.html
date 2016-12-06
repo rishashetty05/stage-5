@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+
+{%block content%}
+            <h1 id="stag3"> <em>  Lesson 3 - Advanced Python</em> </h1>
+            <div class="concept">
+                <h3 class="concept-title" id="lesson3.1">Classes and Objects</h3>
+
+                <div class="concept-description">
+                    <h4>Web of Networks</h4>
+                    <p>Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.</p>
+                    <h4>Overview of OOP Terminology</h4>
+                    <em>Class:</em> A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation. Class is like a Blue print which can be used to create multiple objects.Check <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4140958767/concepts/10434885390923">this </a>video.
+
+                    <em>Class variable:</em> A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.
+
+                    <em>Data member:</em> A class variable or instance variable that holds data associated with a class and its objects.
+
+                    <em>Function overloading:</em> The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.
+
+                    <em>Instance variable:</em> A variable that is defined inside a method and belongs only to the current instance of a class.
+
+                    <em>Inheritance:</em> The transfer of the characteristics of a class to other classes that are derived from it.
+
+                    <em>Instance:</em> An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.
+
+                    <em>Instantiation:</em> The creation of an instance of a class.
+
+                    <em>Method :</em> A special kind of function that is defined in a class definition.
+
+                    <em>Object:</em> A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.
+
+                    <em>Operator overloading:</em> The assignment of more than one function to a particular operator.
+                    <p>
+                        A very basic class would look something like this: 
+                        <pre>
+                            class MyClass:
+                                variable = "blah"
+
+                             def function(self):
+                                print "This is a message inside the class."
+                        </pre>
+                        Click <a href = "https://www.codecademy.com/courses/python-intermediate-en-WL8e4/0/1?curriculum_id=4f89dab3d788890003000096"> this </a> link to check some examples to work on and This <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4140958767/concepts/10133888290923">video </a>is some live examples  using classes and the outputs we could generate of them.
+                    </p>
+                    <br>
+                    <h4>Turtle</h4>
+                    <p> Turtle is one example of classes. In this <a href = "https://docs.python.org/2/library/turtle.html">video</a> We can see how instance of a class turtle is created and how we can utilize the functions inside the class using such instances. Class Turtle indicates the fact that it has a size and a color. Individual instances of the Turtle will contain information about their sizes and their colors.</p>
+                    <br>
+
+                    <h4>Twilio</h4>
+                    <p><a href ="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4156168752/concepts/10134987370923" >Twilio </a>is not a part of teh standard librabry. Its a Python package used to send <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4156168752/concepts/10134987260923">Text Messages</a>. (Refer the <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4156168752/concepts/47501238040923">Download and Installation</a> notes of Twilio). You can also check the additional <a href = "http://www.tutorialspoint.com/python/python_modules.htm">modules</a>available in python. Heres a link to <a href = "https://github.com/twilio/twilio-python"> GitHub</a> on Twilio.
+
+                    <br>
+                    
+                    <h4 >BuiltIn Functions</h4>
+                    The Python interpreter has a number of functions built into it that are always available, such as urlopen, __init__ etc.. CLick <a href = "The Python interpreter has a number of functions built into it that are always available. ">here </a>to check teh documentation on it. We can use these to <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4154428799/concepts/10136290570923">create a class</a>just like bulit in Modules. <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4154428799/concepts/10136290610923">__init__ </a>is a constructor used in all classes which while accessing classes gets called by fault.
+                    <h4>CLass Variables</h4>
+                    <p>Variables declared inside the class definition, but not inside a method are class or static variables:
+                    <pre>
+                    >>> class MyClass:
+                            ...i = 3
+                            ...
+                    >>> MyClass.i
+                        3 
+                    </pre>
+                    <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4180438618/concepts/10107487230923">Class Variables</a> is one of the various class attributes. Meaning it is defined inside a class.
+
+                    <b>Class vs. instance namespaces</b>
+                    To understand what’s happening here, let’s talk briefly about Python namespaces.
+                    A namespace is a mapping from names to objects, with the property that there is zero relation between names in different namespaces. They’re usually implemented as Python dictionaries, although this is abstracted away.
+                    Depending on the context, you may need to access a namespace using dot syntax (e.g., object.name_from_objects_namespace) or as a local variable (e.g., object_from_namespace). As a concrete example:
+                    <pre>
+                    >>class MyClass(object):
+                    ## No need for dot syntax
+                        class_var = 1
+
+                    >>def __init__(self, i_var):
+                        self.i_var = i_var
+                    ## Need dot syntax as we've left scope of class namespace
+                    >>MyClass.class_var
+                    >>1
+                    </pre>
+                    Python classes and instances of classes each have their own distinct namespaces represented by pre-defined attributes MyClass.__dict__ and instance_of_MyClass.__dict__, respectively.
+                    Refer <a href = "https://docs.python.org/2/tutorial/classes.html#class-objects"> this</a> for a clear idea on instantiation and attribute references.
+                    <h4>Inheritance</h4>
+                    <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4180438618/concepts/10161385430923">Inheritance</a> is used to indicate that one class will get most or all of its features from a parent class. This happens implicitly whenever you write <pre> class Foo(Bar), </pre>which says "Make a class Foo that inherits from Bar." When you do this, the language makes any action that you do on instances of Foo also work as if they were done to an instance of Bar. Doing this lets you put common functionality in the Bar class, then specialize that functionality in the <em>Foo</em> class as needed.Chekc this video for example on<a href = "https://classroom.udacity. com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4180438618/concepts/10149487450923"> Class parent</a> &amp; <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345404/modules/355302926675460/lessons/4180438618/concepts/10187685990923"> &amp; Class child</a>.
+                </div>
+            </div>
+            <br>
+        
+{%endblock%}

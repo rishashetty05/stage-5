@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=''>
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/style/newstyle.css"/>
+    <title>Risha Shetty - {%block title%}{%endblock%} Base HTML Templates</title>
+    {% block head %}
+        <!--This is how we can link our HTML contents which comprises our webpage to an external style sheet which is responsible for the styling and outlook of these contents. This is also called relative path addressing-->
+    {%endblock%}
+</head>
+<body>
+    <header>
+        <img class = "myimage" src="/images/Snaps.png" alt="photo of me" width="120" height="90">
+        <h1 style = "text-align: center;">WEB DEVELOPMENT USING GAE</h1>
+    </header>
+    <div id = "sidebar1">
+    <div id='cssmenu'>
+        <ul>
+            <li class='active'><a href='/'><span>Home</span></a></li>
+            <li class='has-sub'><a href='#'><span>Notes</span></a>
+                <ul>
+                   <li><a href='/stageone'><span>Stage 1</span></a></li>
+                    <li><a href='/stagetwo'><span>Stage 2</span></a></li>
+                    <li><a href='/stagethree'><span>Stage 3</span></a></li>
+                    <li><a href='/stagefour'><span>Stage 4</span></a></li>
+                    <li class='last'><a href='/stagefive'><span>Stage 5</span></a></li>
+                </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span>About</span></a>
+                <ul>
+                    <li><a href='#'><span>Me</span></a></li>
+                    <li class='last'><a href='#'><span>My Projects</span></a></li>
+                </ul>
+            </li>
+            <li class='last'><a href='/contact'><span>Contact</span>
+            </a></li>
+        </ul>
+    </div>
+    </div>
+    <div id="contentblock">
+        <div>
+        {%block content%} {%endblock%}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+{%extends 'base.html'%}
+
+{%block content%}
+            <h1 id="lesson2"> <em>  Lesson 2 - Staring with Python </em> </h1>
+            <div class="concept">
+                <h3 class="concept-title" id="lesson2.1">Computer Programming and Computer Science</h3>
+
+                <div class="concept-description">
+                    <h4>What is Programming - Using Python</h4>
+                       Programming is a very precise sequence of steps which informs the universal machine aka, Computer, to carry out the desired computations. Thus we can make a computer do almost anything provided we design the right set of codes, i.e. <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4180729266/concepts/487192400923">Programs</a>.<a href = "http://interactivepython.org/runestone/static/pythonds/Introduction/WhatIsComputerScience.html">Here </a> are some details for understanding the basics of Computer Science and Computer Programming.
+                       Python is one such programmming language used to talk to computers, meaning python interpreter modifies the set of instructions into machine laguage later executed by the hardware. its follows a set of rules, just like <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4180729266/concepts/487134810923"><em>Backus-Naur Form</em></a> has a set of rules for English Grammer representations. For more details refer the links below:
+                       1. <a href = "http://www.tutorialspoint.com/python/">Link1</a>
+                       2. <a href= "https://docs.python.org/2/tutorial/">Link2</a>
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3 class="concept-title" id="lesson2.2">Basics Of Python - Learning Blocks</h3>
+                <div class="concept-description">
+                    <h4>Strings &amp; Variables in Python</h4>
+                        <p>To study a languasge we would always start with letters in alplhabets which would join to form words and then sentences. Smilarly, <em>characters</em>, <em>integers</em>, <em>strings</em>.</p>
+                        Refer the <a href = "http://www.learnpython.org/">link </a> to learn the basics on python.
+                        <p>
+                        In this, <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4192698630/concepts/486877150923">Video Link</a> we  can see how arithmetic characters can be used with variables and strings both.
+                        The <a href= "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4192698630/concepts/483117490923">indexing </a> &amp; <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4192698630/concepts/486877160923"> Sub-Sequencing</a> functionality is however operable only on strings and not numbers. </p>
+
+                    <h4>Procedures(Functions)</h4>
+                        Procedures, also known as, Functions, A function is a block of organized, reusable code that is used to perform a single, related action. Python gives you many built-in functions like print(), etc. but you can also create your own functions. These functions are called user-defined functions. For more details click <a href= "http://www.tutorialspoint.com/python/python_functions.htm">here</a>.
+
+                    <h4> Control FLow and loops</h4>
+                        <p>
+                        Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.
+                        </p>
+                        Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute if outcome is TRUE or FALSE otherwise.  Decision making operators are &gt; , &lt; , == .(referred as <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4196788670/concepts/487275560923">equality comparison</a>)     
+                        <p>
+                        There are two types of loops commonly used in python 1. for 2. while. The general usage is <a href = "http://www.learnpython.org/en/Loops">
+                        here</a>.</p>
+                        Refer ,<a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4196788670/concepts/486867080923">this </a>video for explanation of while loops and <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4196788670/concepts/36447994350923"> Break Statements</a> which are used to break a loop and execute teh next set of codes following while condition.
+                    <h4> Structured Data </h4>
+                        <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4152219158/concepts/486836650923"> Python data structures</a> offer a large choice of operations. We cn choose different kinds of data structures depending on what the data involves, if it needs to be modified, or if it's fixed data, and even what access type we would like.
+                        <a href ="http://code.tutsplus.com/articles/advanced-python-data-structures--net-32748" > Here </a> is a list of all Datamodels and how it should be utilized. Lists &amp; <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4152219158/concepts/487340940923"> nested lists </a> are commonly used Data Structure which can countain a versatile sets of data. We can also perform operations such as <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4152219158/concepts/485326620923" >Mutation</a> - changing existing set of datas by adding more or deletion a data object from the list, and <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4152219158/concepts/487340970923">
+                        Aliasing </a>. When two identifiers refer to the same variable (and therefore value), this is known as an alias. An alias identifier to an existing variable is created using the form &lt;identifier&gt;=&lt;identifier&gt;. 
+
+                        <b>LISTS</b>
+                        <p>A List represents the most versatile type of data structure in Python. It can contain items of different types and it has no rule against unicity. List indices start from zero, the elements can be sliced, concatenated, and so on. Lists also have a lot of similarities with strings, supporting the same kind of operations but unlike strings, lists are mutable.</p> 
+                        A list can be built using the keyword <em>list</em><b>or</b> using square brackets: []
+                        <pre>
+                            >>> l = ['a', 'b', 123]
+                            >>> l
+                            ['a', 'b', 123]
+                            >>> l[0]
+                            'a'
+                        </pre>
+                        <b>SETS</b>
+                        <p>A set is an unordered collection with no duplicate values. A set can be created by using the keyword set or by using curly braces {}. However, to create an empty set you can only use the set construct, curly braces alone will create an empty dictionary.
+
+                        <em>Use the set keyword to create an empty set, curly brackets {} will create an empty dictionary.</em>
+
+                        How to Construct a Set
+                        The set construct accepts one argument, a list.
+                        <pre>
+                        >>> l = [1, 2, 3]
+                        >>> s = set(l)
+                        >>> s
+                        set([1, 2, 3])
+                        </pre>
+
+                        <b>Tuples</b>
+                        <em>Tuples are immutable, but can hold mutable objects.</em>
+                        <p>
+                        A tuple is represented by a number of values separated by commas. Unlike lists, tuples are immutable and the output is surrounded by parentheses so that nested tuples are processed correctly. Additionally, even though tuples are immutable, they can hold mutable data if needed.
+                        </p>
+                        Constructing an empty tuple requires parentheses. Here's an example:
+                        <pre>
+                        >>> my_empty_tuple = ()
+                        >>> my_empty_tuple 
+                        ()
+                        </pre>
+                        Constructing a tuple with one element requires a trailing comma. Example:
+                        <pre>
+                        >>> one_elem_tuple = 'a',
+                        >>> one_elem_tuple 
+                        ('a',)
+                        >>> one_elem_tuple = ('a',)
+                        >>> one_elem_tuple
+                        ('a',)
+                        </pre>
+
+                        <b>Dictionaries</b>
+                        <p>
+                        Dictionaries are represented by a key:value pair. In other words, they are maps or associative collections. The keys, unlike lists where they are numeric, can be of any immutable type and must be unique. The values can be of any type, mutable or immutable.
+                        </p>
+                        How to Construct a Dictionary
+                        There are several ways to construct a dictionary. The most efficient way in terms of performance is to use curly braces {}:
+                        <pre>
+                        >>> vowels = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5:'u'}
+                        >>> vowels
+                        {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+                        </pre>
+                        To Know, when to use what, click <a href = "http://code.tutsplus.com/articles/advanced-python-data-structures--net-32748">here</a>
+                    </div>
+            </div>
+            <br>
+            <div class="concept">
+                <h3 class="concept-title" id="lesson2.2">Basics Of Python - Learning Blocks</h3>
+                <div class="concept-description">  
+                        Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
+                        <ol>
+                        <li>Python is Interpreted: Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.</li>
+
+                        <li>Python is Interactive: You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.</li>
+
+                        <li>Python is Object-Oriented: Python supports Object-Oriented style or technique of programming that encapsulates code within objects.</li>
+
+                        <li>Python is a Beginner's Language: Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.</li>
+                        </ol>
+                </div>
+            </div>
+            
+{%endblock%}

@@ -1,0 +1,37 @@
+
+{% block content %}
+
+
+	<!--{% if cumulated_lessons %}-->
+		{% for unit in cumulated_lessons %}
+			<h2>{{ unit["lesson_title"] }}</h2>
+			{% for concept in concepts_order %}
+				{% if unit["concepts"].has_key(concept) %}-->
+				<div class="concept">
+						<div class="concept-title">
+							<h3>{{unit["concepts"][concept]["concept_title"]}}</h3>
+						</div>
+						<div class="concept-description">
+							<!--{% if unit["concepts"][concept]["concept_description"]["html_list"]%}-->
+							<p>
+								{{unit["concepts"][concept]["concept_description"]["description"]}}
+							</p>
+							<!--<ol>
+								{% for item in unit["concepts"][concept]["concept_description"]["html_list"] %}
+								<li>{{item}}</li>
+								{% endfor %}
+							</ol> 
+							{% else %}
+								{{unit["concepts"][concept]["concept_description"]}}
+							{% endif %}-->
+						</div>
+						<!--{% if unit["concepts"][concept]["image"] %}
+						<div class="container">
+							<img src='{{unit["concepts"][concept]["image"]}}'>
+						</div>
+						{% endif %}-->
+				</div>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+	{% endif %}

@@ -1,0 +1,144 @@
+{%extends 'base.html'%}
+
+{%block content%}
+            <h1 id="lesson5"> <em>  Lesson 5 - Javascript &amp; Jquery</em> </h1>
+            <div class="concept">
+                <h3 class="concept-title" id="lesson5.1">Javascript</h3>
+
+                <div class="concept-description">
+                    <h4>Javascript</h4>
+                    <p>Javascript is an easy-to-use programming language that can be embedded in the header of our HTML web pages.  It can enhance the dynamics and interactive features of the HTML page by allowing us to perform calculations, check forms, write interactive games, add special effects, customize graphics selections, create security passwords and more.</p>
+					<p>JavaScript has many other uses as well. Everyones familiar with using the Google email client Gmail. Many of the additional features and functionalities that make Gmail such a popular email solution are created using JavaScript.JavaScript has also been used for server-side programming, game development, and even creating desktop applications. Years ago, JavaScript was popular but web developers were not entirely sold on the idea of using it simply because every web browser would render JavaScript content in a different manner. Newer standards now force all web browsers to implement JavaScript uniformly; saving developers time and frustration trying to debug code for a specific web browsing client. Dynamic content is the hot topic in web development right now. Dynamic content refers to content that constantly changes and adapts to specific users whenever possible. For example, JavaScript can be used to determine if a website visitor is using a computer or a mobile device before deciding whether or not to render the mobile version of the website. It’s these small things behind the scenes that create genuine value in using JavaScript to create dynamic web pages.</p>
+                    <br>
+                    <h4>OOP</h4>
+                     <p>OOP is a programming technique designed to simplify complicated programming concepts. In essence, object-oriented programming revolves around the idea of user- and system-defined chunks of data, and controlled means of accessing and modifying those chunks.</p>
+					<p> Object-oriented programming consists of Objects, Methods and Properties. An object is basically a black box which stores some information. It may have a way for us to read that information and a way to write too, or change, that information. It may also have other less obvious ways of interacting with the information. Click on teh ref. links at teh endof teh page to understand the co-relation in detail.</p>
+					<p>Javascript is not necessarily an OOP language but makes use of its concepts, such as objects &mp; properties. A web page document is an object. Any table, form, button, image, or link on the page is also an object. Each object has certain properties (information about the object). For example, the background color of the document is written as <pre>document.bgcolor</pre>. You would change the color of your page to red by writing the line:<pre> document.bgcolor="red"</pre>.</p>
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3 class="concept-title" id="lesson5.2">JavaScript and other Languages</h3>
+                <div class="concept-description">
+                    <h4>What's the difference between JavaScript and Java?</h4>
+                    <p>The 2 languages have almost nothing in common except for the name. Although Java is technically an interpreted programming language, it is coded in a similar fashion to C++, with separate header and class files, compiled together prior to execution. It is powerful enough to write major applications and insert them in a web page as a special object called an "applet." Java has been generating a lot of excitment because of its unique ability to run the same program on IBM, Mac, and Unix computers. Java is not considered an easy-to-use language for non-programmers.</p>
+					<p>Javascript is much simpler to use than Java. With Javascript, we can check a form for errors, by just typing an if-then statement at the top of the page. No compiling, no applets, just a simple sequence.</p>
+
+                    <h4>JQuery vs. Javascript</h4>
+                    <p>JavaScript and jQuery are actually the same thing. In a nutshell, jQuery is a set of JavaScript libraries that have been designed specifically to simplify HTML document traversing, animation, event handling, and Ajax interactions.</p>
+					<p>Before jQuery was developed, web developers created their own custom frameworks in JavaScript. This allowed them to work around specific bugs without wasting time debugging common features. This led to groups of developers creating JavaScript libraries that were open source and free to use. JQuery is simply a specific library of JavaScript code. There are many other JavaScript code libraries such as MooTools, but jQuery has become the most popular because it is so easy to use and extremely powerful.
+					<p>To see this difference in action, consider the following example that is designed to change the background color of a body tag using jQuery and JavaScript respectively:
+					<p>
+					<em>JQuery:</em>
+						<pre>
+							$ (‘body’) .css (‘background’, ‘#ccc’);
+						</pre>
+					<em>JavaScript:</em>
+						<pre>
+							Function changeBachground(color) {
+
+        						Document.body.style.background = color;
+
+								}
+							Onload=”changeBackground (‘red’);”</p>
+						</pre>
+					</p>
+					<p>WHere JQuery can do it  just a single statement, Javascript takes 3 such statements. Remember, that although 99% of your web development projects will work perfectly fine using jQuery, there will be a small percentage that does require JavaScript. As a result, it would be wise to study both so you can transition between the two as needed to provide a better web development service to your clients.</p>   
+          		</div>
+            </div>
+            <div class="concept">
+                <h3 class="concept-title" id="lesson5.3">Javascript Concepts </h3>
+
+                <div class="concept-description">
+                	<h4>A Hello World Example!</h4>
+                	<p> JavaScript is a bit more complex to get comfortable with than HTML and CSS</p>.
+					Here is an example of Javascript being used. In an .html file enter the following element on a new line just before the closing &lt;/body&gt;:
+					<pre>
+					<script src="scripts/main.js"></script>
+					</pre>
+					This is basically doing the same job as the &lt;link&gt; element for CSS — it applies the JavaScript to the page, so it can have an effect on the HTML (and CSS, and anything else on the page). Now add the below following code:
+					<pre>
+					var myHeading = document.querySelector('h1');
+					myHeading.textContent = 'Hello world!';
+					</pre>
+					Reload the .html file to see the effects.
+					
+					<h4>What isthe DOM?</h4>
+					<p>HTML, CSS and JavaScript are the three components that make almost every website. As part of the process of building websites, browsers convert all of the HTML they receive into a JavaScript object called the Document Object Model (DOM).By examining the DOM, we can learn pretty much everything about a website.
+					<pre>
+						if (document.getElementsByClassName("education-entry").length === 0) 
+								{
+    							document.getElementById("education").style.display = "none";
+								}
+					</pre>
+					First off, there's an if statement. In this example, the education section is empty so we execute document.getElementById("education").style.display = "none";
+					<pre>
+						document
+					</pre>
+					document refers to the web page in its current state. <a href = "http://www.w3schools.com/js/js_htmldom_methods.asp">DOM</a>, which contains all of the information about a website's visible elements. document is the DOM. We need to change the DOM if we want to add or remove page elements.
+					<pre>
+						getElementById("education")
+					</pre>	
+					getElementById(id) is a DOM manipulation method that will grab a single page element object with the id given. Notice how the word Element is singular in the method name. That means it returns a single page element. Other DOM methods containing Elements, like getElementsByClassName(), will return an array of page elements.In this example, we've grabbed the entire education section of the resume. i.e. In the HTML, this is inside &lt;div id="education"&gt;
+					<pre>
+						.style
+					</pre>
+					.style is a <a href = "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"> DOM property </a>. It is used to change a CSS style of the selected page element. The property that follows .style is the CSS style that will be modified by this piece of code.<a href = "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference"> Here's a list</a> of all the possible CSS properties you can change.
+					<pre>
+					.display = "none"
+					</pre>
+					Every page element has a display CSS property, which normally controls how that page element interacts with others. If display is set to "none", however, then the element is removed entirely from the page.
+
+					<h4> Loop and Flow Controls</h4>
+						<p> Before trying to unsderstand, oops and flow controls lets understand some basic concepts.
+							<em>Strings</em> - Just like Python, JavaScript <a href= "http://www.w3schools.com/js/js_strings.asp"> strings </a> are used for storing and manipulating text. eg. var firstName = "John"
+							<em>Function</em> - JavaScript <a href ="http://www.w3schools.com/js/js_functions.asp">Function </a> is defined with the <b>function</b> keyword, followed by a <b>name</b>, followed by parentheses ().
+							 Below is an example of how functions are defined and how they are Invoked, Eg.
+							<pre>
+							 		function toCelsius(fahrenheit) {
+    										return (5/9) * (fahrenheit-32);
+																		}
+									document.getElementById("demo").innerHTML = toCelsius(77);
+							</pre>
+							<em>Objects</em> - JavaScript<a href = "http://www.w3schools.com/js/js_objects.asp"> Objects</a> re variables too. But objects can contain many values. The name:values pairs (in JavaScript objects) are called properties.Eg.
+									var person = {
+    										firstName:"John",
+    										lastName:"Doe",
+    										age:50,
+    										eyeColor:"blue"
+												};
+							We can access object properties in two ways: 
+							1. DOt Notation - objectName.propertyName
+							2. Bracket Notation - objectName["propertyName"]
+							This <a href = "https://classroom.udacity.com/nanodegrees/nd000/parts/0001345407/modules/000134540775460/lessons/6803778593/concepts/19254085650923">video</a> gives us an overview on the same.
+
+							<p>Loops can execute a Block of codes. JavaScript supports different kinds of loops:
+								<ul>
+									<li>for - loops through a block of code a number of times</li>
+									<li>for/in - loops through the properties of an object</li>
+									<li>while - loops through a block of code while a specified condition is true</li>
+									<li>do/while - also loops through a block of code while a specified condition is trueIf Statements comparison operator</li>
+								</ul>
+								<b>Strict equality (===) vs Loose equality (==)</b>
+								<p>When you use three equal signs, ===, no type conversion is done prior to the comparison. If the values are different types, for example, a String and a Number, they can't ever be equal. To return true, the values must be equal and the types must be the same.Loose equality, ==, checks to see if the two values are the same type and if not, converts to a common type before the conversion. If the types are already the same, there is no difference between the result of === and ==. When they aren't it can cause unexpected results.</p>
+								According to Jacques Favreau, the lead front-end engineer at Udacity, you should never use ==. It's a frequent source of bugs. In fact, if a Udacity engineer tries to commit code with ==, it automatically gets rejected.The same conditions apply for strict inequality (!==) and loose inequality (!=). Loose inequality is more forgiving than loose equality so you might not see strict inequality as often.
+					</div>
+			</div>	
+
+			<h4> References </h4>
+				<ol>
+				<li> <a href = "http://www.webteacher.com/javascript/" >Link 1 -  Simple Tutorials on Javascript </a> - DOM HTML elements are explained in detail. </li>
+				<li> <a href = "http://www.w3schools.com/js/js_intro.asp" >Link 2 - W3Schools HTML, CSS, Javascript &amp; Jquery Tutorials</a> There are a lot of fuctions given, such as <em>removeClass('active')</em>, <a href = "http://www.w3schools.com/jquery/html_addclass.asp">addClass('active')</a> etc. in Jquery for hding elements in navigation menu and accordingly activating or deactivating the visible elements. </li> 
+				<li> <a href = "http://www.tutorialspoint.com/javascript/">Link 3 - Learning Java The Hard Way</a></li>
+				<li> <a href = "https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">Link 4 - MDN  Javascripts Basics </a></li> 
+				<li><a href = "http://stackoverflow.com/questions/20283098/what-is-the-difference-between-javascript-and-jquery">Link 5- Difference between JQuery &amp; Javascript</li>
+				<li><a href = "https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip">Link 6 - A Hello World Example</a></li>
+				<li><a href = "http://stackoverflow.com/questions/34754393/how-to-keep-nested-li-a-tag-active-and-visible">Link 7 - Stack overflow - Answered Questions.</a> - A Majority of my JS research has led me to a number of questions which were already answered in Stack Overflow. I can now handle navigation menu to change active class from ul to li as explained in this link, based on the visibility of that element. Also the CSS styling ideas from this <a hreff = "http://stackoverflow.com/questions/34754393/how-to-keep-nested-li-a-tag-active-and-visible">query </a>helped in manipulating Child listed elements.
+				<li><a href = "http://cssmenumaker.com/blog/creating-a-responsive-menu">Link 8 - Creating a responsive menu</a>
+				<li><a href = " http://cssmenumaker.com/blog/flat-jquery-accordion-menu-tutorial">Link9 CSS-JQuery Blog</a> - A detailed description on the Navigation menu as per this blog has helped me a lot in making the custm JQuery function.
+				</ol>
+
+				</div>
+			</div>
+            
+{%endblock%}
